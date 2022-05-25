@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightwhite"
+    tools:context=".MainActivity"
+    >
+
+    <TextView
+        android:id="@+id/topText"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="146dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="154dp"
+        android:layout_marginBottom="682dp"
+        android:text="Sign Up"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/topImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-86dp"
+        android:layout_marginTop="-44dp"
+        android:layout_marginEnd="265dp"
+        android:layout_marginBottom="527dp"
+        android:src="@drawable/background02" />
+
+
+    <ImageView
+        android:id="@+id/mainImage"
+        android:layout_width="340dp"
+        android:layout_height="316dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="139dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="275dp"
+        android:src="@drawable/male" />
+
+    <ImageView
+        android:id="@+id/bottomImage"
+        android:layout_width="151dp"
+        android:layout_height="127dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="256dp"
+        android:layout_marginTop="605dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:src="@drawable/background04" />
+
+
+    <EditText
+        android:id="@+id/signinemailInput"
+        android:layout_width="330dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="496dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/roundedbutton2"
+        android:hint="Enter your email"
+        android:textAlignment="center" />
+
+    <EditText
+
+        android:id="@+id/signinpasswordInput"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="554dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/roundedbutton2"
+        android:hint="Enter your password"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/signupButton"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="57dp"
+        android:background="@drawable/roundedbutton"
+        android:text="Sign Up" />
+
+
+</RelativeLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightwhite"
+    tools:context=".MainActivity"
+    >
+
+    <TextView
+        android:id="@+id/topText"
+        android:layout_width="247dp"
+        android:layout_height="25dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="665dp"
+        android:text="We Care For You"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/topImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="-175dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="333dp"
+        android:src="@drawable/background02" />
+
+    <ImageView
+        android:id="@+id/mainImage"
+        android:layout_width="wrap_content"
+        android:layout_height="350dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="132dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="249dp"
+        android:src="@drawable/together" />
+
+    <ImageView
+        android:id="@+id/bottomImage"
+        android:layout_width="151dp"
+        android:layout_height="127dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-27dp"
+        android:layout_marginBottom="-1dp"
+        android:src="@drawable/background01" />
+
+
+    <Button
+        android:id="@+id/mainloginButton"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="152dp"
+        android:background="@drawable/roundedbutton"
+        android:text="Login" />
+
+    <Button
+        android:id="@+id/mainsignupButton"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="75dp"
+        android:background="@drawable/roundedbutton2"
+        android:text="Sign Up" />
+
+
+</RelativeLayout>
