@@ -15,11 +15,9 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
         android:layout_marginStart="146dp"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="154dp"
-        android:layout_marginBottom="682dp"
         android:text="Sign Up"
         android:textAlignment="center"
         android:textColor="@color/black"
@@ -45,14 +43,14 @@
         android:id="@+id/mainImage"
         android:layout_width="340dp"
         android:layout_height="316dp"
+        android:layout_below="@+id/topText"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="139dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="275dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="326dp"
         android:src="@drawable/male" />
 
     <ImageView
@@ -72,32 +70,34 @@
 
     <EditText
         android:id="@+id/signinemailInput"
-        android:layout_width="330dp"
-        android:layout_height="50dp"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="496dp"
-        android:layout_marginEnd="32dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="211dp"
         android:background="@drawable/roundedbutton2"
         android:hint="Enter your email"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textColor="#9B26B6" />
 
     <EditText
 
         android:id="@+id/signinpasswordInput"
         android:layout_width="350dp"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="554dp"
-        android:layout_marginEnd="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="140dp"
         android:background="@drawable/roundedbutton2"
         android:hint="Enter your password"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textColor="#9B26B6" />
 
     <Button
         android:id="@+id/signupButton"
