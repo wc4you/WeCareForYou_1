@@ -8,6 +8,8 @@ public class ModelClass {
     String Choice4;
     String Choice5;
 
+    public ModelClass(){}
+
     public ModelClass(String question, String choice1, String choice2, String choice3, String choice4, String choice5) {
         Question = question;
         Choice1 = choice1;
