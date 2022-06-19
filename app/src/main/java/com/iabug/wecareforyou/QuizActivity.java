@@ -13,6 +13,12 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import java.util.HashMap;
+import java.util.Map;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -36,9 +42,12 @@ public class QuizActivity extends AppCompatActivity {
     int ct=0;
     public static int arsize=0;
     TextView question;
-    RadioButton choice1,choice2,choice3,choice4,choice5;
+    RadioButton choice1,choice2,choice3,choice4;//,choice5;
     Button nxtBtn;
     RadioGroup radioGroup;
+    FirebaseFirestore db;
+    String userid;
+    Map<String,Object> user=new HashMap<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +60,7 @@ public class QuizActivity extends AppCompatActivity {
         choice2=findViewById(R.id.choice2);
         choice3=findViewById(R.id.choice3);
         choice4=findViewById(R.id.choice4);
-        choice5=findViewById(R.id.choice5);
+//        choice5=findViewById(R.id.choice5);
         nxtBtn=findViewById(R.id.nextButton);
         radioGroup=findViewById(R.id.radiogroup);
 
@@ -72,11 +81,22 @@ public class QuizActivity extends AppCompatActivity {
                             updateTextView();
                             modelClass = List.get(index);
                             setdata();
+//                            senddata();
                         }
                 }
             });
 
     }
+
+//    private void senddata() {
+//        if (index >= arsize-1) {
+//            userid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+//            DocumentReference documentReference = db.collection("Users").document(userid);
+//            Map<String, Object> user = new HashMap<>();
+//            user.put("Result", res);
+//            documentReference.set(user);
+//        }
+//    }
 
 
     private void updatescore(int selectedId) {
@@ -89,8 +109,8 @@ public class QuizActivity extends AppCompatActivity {
                 res+=score;break;
             case R.id.choice4:score=3;
                 res+=score;break;
-            case R.id.choice5:score=4;
-                res+=score;break;
+//            case R.id.choice5:score=4;
+//                res+=score;break;
 
         }
 
@@ -117,7 +137,7 @@ public class QuizActivity extends AppCompatActivity {
         choice2.setText(modelClass.getChoice2());
         choice3.setText(modelClass.getChoice3());
         choice4.setText(modelClass.getChoice4());
-        choice5.setText(modelClass.getChoice5());
+//        choice5.setText(modelClass.getChoice5());
     }
 
 

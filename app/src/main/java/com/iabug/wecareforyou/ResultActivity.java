@@ -29,7 +29,7 @@ public class ResultActivity extends AppCompatActivity {
                 result.setText(" Moderate stress");
                 res=0;
             }
-            if (res >= 27 && res <= 40) {
+            if (res >= 27 && res <= 100) {
                 System.out.println(res + "/40 " + "  High perceived stress");
                 result.setText(" High perceived stress");
                 res=0;

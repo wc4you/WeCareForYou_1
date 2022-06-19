@@ -39,6 +39,9 @@ public class HomeActivity extends AppCompatActivity {
         List =new ArrayList<>();
 
         databaseReference= FirebaseDatabase.getInstance().getReference("Questions");
+//        databaseReference= FirebaseDatabase.getInstance().getReference("Anxiety");
+//        databaseReference= FirebaseDatabase.getInstance().getReference("Depression");
+//        databaseReference= FirebaseDatabase.getInstance().getReference("Stress"+"Depression"+"Anxiety");
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {

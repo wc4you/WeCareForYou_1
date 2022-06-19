@@ -1,5 +1,7 @@
 package com.iabug.wecareforyou;
 
+import static com.iabug.wecareforyou.ResultActivity.result;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -9,18 +11,30 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.EmailAuthCredential;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.HashMap;
+import java.util.Map;
+
+import io.grpc.CallCredentials;
 
 
 public class SignUpActivity extends AppCompatActivity {
     private TextView passwordTV, emailTV;
     private FirebaseAuth auth;
+    FirebaseFirestore db;
+    String userid;
+    Map<String,Object> user=new HashMap<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+        db =FirebaseFirestore.getInstance();
         Button details_submit = findViewById(R.id.signupButton);
         passwordTV = findViewById(R.id.signinpasswordInput);
         emailTV = findViewById(R.id.signinemailInput);
@@ -50,6 +64,7 @@ public class SignUpActivity extends AppCompatActivity {
             //create user
             auth.createUserWithEmailAndPassword(email, password)
                     .addOnCompleteListener(SignUpActivity.this, task -> {
+
                         Toast.makeText(SignUpActivity.this, "createUserWithEmail:onComplete:" + task.isSuccessful(), Toast.LENGTH_SHORT).show();
                         // If sign in fails, display a message to the user. If sign in succeeds
                         // the auth state listener will be notified and logic to handle the
@@ -58,7 +73,14 @@ public class SignUpActivity extends AppCompatActivity {
                             Toast.makeText(SignUpActivity.this, "Authentication failed." + task.getException(),
                                     Toast.LENGTH_SHORT).show();
                         } else {
-                            startActivity(new Intent(SignUpActivity.this, LoginActivity.class));
+//                            userid=auth.getCurrentUser().getUid();
+                            userid=FirebaseAuth.getInstance().getCurrentUser().getUid();
+                            DocumentReference documentReference=db.collection("Users").document(userid);
+                            Map<String,Object> user=new HashMap<>();
+                            user.put("Email",email);
+                            documentReference.set(user);
+                            startActivity(new Intent(SignUpActivity.this, HomeActivity.class));
+
                             finish();
                         }
                     });
