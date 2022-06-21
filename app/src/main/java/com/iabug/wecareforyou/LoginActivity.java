@@ -2,6 +2,7 @@ package com.iabug.wecareforyou;
 
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -27,6 +28,7 @@ public class LoginActivity extends AppCompatActivity {
     private TextView signuptext,forgottext;
     private EditText email_TV, password_TV;
     private FirebaseAuth auth;
+    SharedPreferences savelogin;
 
     @Override
 
@@ -50,6 +52,11 @@ public class LoginActivity extends AppCompatActivity {
 
         //Get Firebase auth instance
         auth = FirebaseAuth.getInstance();
+        savelogin = getSharedPreferences("login", MODE_PRIVATE);
+        if(savelogin.getBoolean("logged",false)){
+            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+            startActivity(intent);
+        }
 
         signuptext.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -105,6 +112,7 @@ public class LoginActivity extends AppCompatActivity {
                                         }
                                     } else {
                                         System.out.println("user is logged in -------"+auth.getCurrentUser());
+                                        savelogin.edit().putBoolean("logged",true).apply();
                                         Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                                         startActivity(intent);
                                         finish();
