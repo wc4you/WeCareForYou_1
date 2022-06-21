@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -26,6 +27,8 @@ public class HomeActivity extends AppCompatActivity {
     TextView tv;
     public static ArrayList<ModelClass> List;
     DatabaseReference databaseReference;
+    DatabaseReference databaseReferences;
+    DatabaseReference databaseReferenced;
 
 
     @Override
@@ -38,9 +41,10 @@ public class HomeActivity extends AppCompatActivity {
 
         List =new ArrayList<>();
 
-        databaseReference= FirebaseDatabase.getInstance().getReference("Questions");
-//        databaseReference= FirebaseDatabase.getInstance().getReference("Anxiety");
-//        databaseReference= FirebaseDatabase.getInstance().getReference("Depression");
+        databaseReference= FirebaseDatabase.getInstance().getReference("Stress");
+        databaseReferences= FirebaseDatabase.getInstance().getReference("Anxiety");
+        databaseReferenced= FirebaseDatabase.getInstance().getReference("Depression");
+        System.out.println("user is logged in home ------"+ FirebaseAuth.getInstance().getCurrentUser());
 //        databaseReference= FirebaseDatabase.getInstance().getReference("Stress"+"Depression"+"Anxiety");
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -49,7 +53,7 @@ public class HomeActivity extends AppCompatActivity {
                     ModelClass modelClass=dataSnapshot.getValue(ModelClass.class);
                     List.add(modelClass);
                 }
-                Collections.shuffle(List);
+//                Collections.shuffle(List);
                 arsize= List.size();
                 ll1.setOnClickListener(v->{
                     Intent intent =new Intent(HomeActivity.this,QuizActivity.class);
@@ -57,11 +61,57 @@ public class HomeActivity extends AppCompatActivity {
                 });
             }
 
+
+
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
             }
         });
+        databaseReferences.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for(DataSnapshot dataSnapshot: snapshot.getChildren()){
+                    ModelClass modelClass=dataSnapshot.getValue(ModelClass.class);
+                    List.add(modelClass);
+                }
+//                Collections.shuffle(List);
+                arsize= List.size();
+                ll1.setOnClickListener(v->{
+                    Intent intent =new Intent(HomeActivity.this,QuizActivity.class);
+                    startActivity(intent);
+                });
+            }
+
+
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+        databaseReferenced.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for(DataSnapshot dataSnapshot: snapshot.getChildren()){
+                    ModelClass modelClass=dataSnapshot.getValue(ModelClass.class);
+                    List.add(modelClass);
+                }
+//                Collections.shuffle(List);
+                arsize= List.size();
+                ll1.setOnClickListener(v->{
+                    Intent intent =new Intent(HomeActivity.this,QuizActivity.class);
+                    startActivity(intent);
+                });
+            }
+
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
 
 
     }

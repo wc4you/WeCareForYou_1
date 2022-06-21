@@ -26,9 +26,10 @@ import io.grpc.CallCredentials;
 public class SignUpActivity extends AppCompatActivity {
     private TextView passwordTV, emailTV;
     private FirebaseAuth auth;
-    FirebaseFirestore db;
-    String userid;
-    Map<String,Object> user=new HashMap<>();
+    public static FirebaseFirestore db;
+    public static String userid;
+    public static Map<String,Object> user=new HashMap<>();
+//    Map<String,Object> user=new HashMap<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,8 +76,7 @@ public class SignUpActivity extends AppCompatActivity {
                         } else {
 //                            userid=auth.getCurrentUser().getUid();
                             userid=FirebaseAuth.getInstance().getCurrentUser().getUid();
-                            DocumentReference documentReference=db.collection("Users").document(userid);
-                            Map<String,Object> user=new HashMap<>();
+                            DocumentReference documentReference=db.collection(userid).document("Result");
                             user.put("Email",email);
                             documentReference.set(user);
                             startActivity(new Intent(SignUpActivity.this, HomeActivity.class));

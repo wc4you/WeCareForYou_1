@@ -8,6 +8,7 @@
     tools:context=".ResultActivity">
 
     <LinearLayout
+
         android:layout_width="336dp"
         android:layout_height="148dp"
         android:gravity="center"
@@ -26,5 +27,23 @@
             android:text="TextView"
             android:textColor="#000"
             android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:gravity="center_horizontal|center_vertical"
+            android:textColor="#000"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:gravity="center_horizontal|center_vertical"
+            android:textColor="#000"
+            android:textSize="24sp"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

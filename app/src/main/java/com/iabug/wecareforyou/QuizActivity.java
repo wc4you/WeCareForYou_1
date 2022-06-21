@@ -38,9 +38,12 @@ public class QuizActivity extends AppCompatActivity {
 //    ResultActivity result;
     public static int index=0;
     public static int res=0;
+    public static int resa=0;
+    public static int resd=0;
     int score=0;
     int ct=0;
     public static int arsize=0;
+    public static int count=0;
     TextView question;
     RadioButton choice1,choice2,choice3,choice4;//,choice5;
     Button nxtBtn;
@@ -49,12 +52,11 @@ public class QuizActivity extends AppCompatActivity {
     String userid;
     Map<String,Object> user=new HashMap<>();
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
-
-
         question=findViewById(R.id.question);
         choice1=findViewById(R.id.choice1);
         choice2=findViewById(R.id.choice2);
@@ -66,7 +68,8 @@ public class QuizActivity extends AppCompatActivity {
 
                 modelClass=List.get(index);
                 setdata();
-
+                count++;
+        System.out.println("user is logged in quiz ------"+ FirebaseAuth.getInstance().getCurrentUser());
         System.out.println("count----------"+ct);
             nxtBtn.setOnClickListener(new View.OnClickListener(){
                 @Override
@@ -100,6 +103,7 @@ public class QuizActivity extends AppCompatActivity {
 
 
     private void updatescore(int selectedId) {
+        if(index>-1 &&index<7){
         switch (selectedId){
             case R.id.choice1:score=0;
                 res+=score;break;
@@ -111,16 +115,50 @@ public class QuizActivity extends AppCompatActivity {
                 res+=score;break;
 //            case R.id.choice5:score=4;
 //                res+=score;break;
+        }
+        System.out.println("res is --------------"+res);
+        }
+        if (index>=7 && index<14){
+            switch (selectedId){
+                case R.id.choice1:score=0;
+                    resa+=score;break;
+                case R.id.choice2:score=1;
+                    resa+=score;break;
+                case R.id.choice3:score=2;
+                    resa+=score;break;
+                case R.id.choice4:score=3;
+                    resa+=score;break;
+//            case R.id.choice5:score=4;
+//                res+=score;break;
 
+            }
+            System.out.println("resa-------"+resa);
         }
 
-        System.out.println("res-------"+res);
+        if(index>=14 && index<22) {
+            switch (selectedId){
+                case R.id.choice1:score=0;
+                    resd+=score;break;
+                case R.id.choice2:score=1;
+                    resd+=score;break;
+                case R.id.choice3:score=2;
+                    resd+=score;break;
+                case R.id.choice4:score=3;
+                    resd+=score;break;
+//            case R.id.choice5:score=4;
+//                res+=score;break;
+
+            }
+            System.out.println("resd-------"+resd);
+        }
+
+
 
     }
     private void updateTextView() {
         if(index<arsize-1) {
-            index++;
             System.out.println("index-is-------------"+index+"arzise-----"+arsize);
+            index++;
         }
         else{
             System.out.println("updateTextView else------------------"+index);
@@ -139,7 +177,6 @@ public class QuizActivity extends AppCompatActivity {
         choice4.setText(modelClass.getChoice4());
 //        choice5.setText(modelClass.getChoice5());
     }
-
 
     @Override
     protected void onNewIntent(Intent intent) {
