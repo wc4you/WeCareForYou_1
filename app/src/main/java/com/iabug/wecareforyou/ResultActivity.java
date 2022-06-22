@@ -51,77 +51,77 @@ public class ResultActivity extends AppCompatActivity {
         if (index >= arsize - 1) {
             System.out.println("----------------------------IN update result-------------------------------------");
             if (res >= 0 && res <= 14) {
-                System.out.println(res + "/40 " + " Normal/ Not Stressed");
+                System.out.println(res +  " Normal/ Not Stressed");
                 result.setText("Normal/ Not Stressed");
 //                res=0;
             }
             if (res >= 15 && res <= 18) {
-                System.out.println(res + "/40 " + " Mild Stress");
+                System.out.println(res +  " Mild Stress");
                 result.setText("Mild Stress");
 //                res=0;
             }
             if (res >= 19 && res <= 25) {
-                System.out.println(res + "/40 " + " Moderate stress");
+                System.out.println(res +  " Moderate stress");
                 result.setText("Moderate Stress");
 //                res=0;
             }
             if (res >= 26 && res <= 33) {
-                System.out.println(res + "/40 " + " SevereSevere stress");
+                System.out.println(res +  " Severe stress");
                 result.setText(" Severe stress");
 //                res=0;
             }
             if (res >= 34){// && res <= 100) {
-                System.out.println(res + "/40 " + "  Extremely Severe stress");
+                System.out.println(res +  "  Extremely Severe stress");
                 result.setText(" Extremely Severe stress");
 //                res=0;
             }
             if (resa >= 0 && resa <= 7) {
-                System.out.println(resa + "/40 " + " Normal / No anxiety");
+                System.out.println(resa +  " Normal / No anxiety");
                 result2.setText("Normal / No anxiety");
 //                resa=0;
             }
             if (resa >= 8 && resa <= 9) {
-                System.out.println(resa + "/40 " + " Mild Anxiety");
+                System.out.println(resa +  " Mild Anxiety");
                 result2.setText("Mild Anxiety");
 //                resa=0;
             }
             if (resa >= 10 && resa <= 14) {
-                System.out.println(resa + "/40 " + " Moderate Anxiety");
+                System.out.println(resa +  " Moderate Anxiety");
                 result2.setText("Moderate Anxiety");
 //                resa=0;
             }
             if (resa >= 15 && resa <= 19) {
-                System.out.println(resa + "/40 " + " Severe Anxiety");
+                System.out.println(resa +  " Severe Anxiety");
                 result2.setText(" Severe Anxiety");
 //                resa=0;
             }
             if (resa >= 20){// && resa <= 100) {
-                System.out.println(resa + "/40 " + "  Extremely Severe Anxiety");
+                System.out.println(resa +  "  Extremely Severe Anxiety");
                 result2.setText(" Extremely Severe Anxiety");
 //                resa=0;
             }
             if (resd >= 0 && resd <= 9) {
-                System.out.println(resd + "/40 " + " Normal / Not Depressed");
+                System.out.println(resd +  " Normal / Not Depressed");
                 result3.setText("Normal / Not Depressed");
 //                resd=0;
             }
             if (resd >= 10 && resd <= 13) {
-                System.out.println(resd + "/40 " + " Mild depression");
+                System.out.println(resd +  " Mild depression");
                 result3.setText("Mild depression");
 //                resd=0;
             }
             if (resd >= 14 && resd <= 20) {
-                System.out.println(resd + "/40 " + " Moderate depression");
+                System.out.println(resd +  " Moderate depression");
                 result3.setText("Moderate depression");
 //                resd=0;
             }
             if (resd >=21 && resd <= 27) {
-                System.out.println(resd + "/40 " + " Severe depression");
+                System.out.println(resd +  " Severe depression");
                 result3.setText(" Severe depression");
 //                resd=0;
             }
             if (resd >= 28){// && resd <= 100) {
-                System.out.println(resd + "/40 " + "  Extremely Severe depression");
+                System.out.println(resd +  "  Extremely Severe depression");
                 result3.setText(" Extremely Severe depression");
 //                resd=0;
             }
