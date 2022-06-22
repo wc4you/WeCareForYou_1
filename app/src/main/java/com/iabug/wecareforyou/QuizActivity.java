@@ -2,6 +2,8 @@ package com.iabug.wecareforyou;
 
 import static com.iabug.wecareforyou.ResultActivity.result;
 import static com.iabug.wecareforyou.HomeActivity.List;
+import static com.iabug.wecareforyou.SignUpActivity.db;
+import static com.iabug.wecareforyou.SignUpActivity.userid;
 
 
 import android.content.Intent;
@@ -13,6 +15,8 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -27,6 +31,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -43,7 +48,8 @@ public class QuizActivity extends AppCompatActivity {
     int score=0;
     int ct=0;
     public static int arsize=0;
-    public static int count=0;
+
+    public static int count=1;
     TextView question;
     RadioButton choice1,choice2,choice3,choice4;//,choice5;
     Button nxtBtn;
@@ -67,8 +73,10 @@ public class QuizActivity extends AppCompatActivity {
         radioGroup=findViewById(R.id.radiogroup);
 
                 modelClass=List.get(index);
+        db = FirebaseFirestore.getInstance();
+        userid=FirebaseAuth.getInstance().getCurrentUser().getUid();
                 setdata();
-                count++;
+//                count++;
         System.out.println("user is logged in quiz ------"+ FirebaseAuth.getInstance().getCurrentUser());
         System.out.println("count----------"+ct);
             nxtBtn.setOnClickListener(new View.OnClickListener(){
@@ -162,6 +170,13 @@ public class QuizActivity extends AppCompatActivity {
         }
         else{
             System.out.println("updateTextView else------------------"+index);
+                db.collection(userid).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        count=task.getResult().size();
+                        System.out.println("quiz count is 990009090------------"+count);
+                    }
+                });
                     Intent intent=new Intent(QuizActivity.this,ResultActivity.class);
                     startActivity(intent);
                     finish();
