@@ -51,7 +51,6 @@ public class HomeActivity extends AppCompatActivity {
         databaseReferences= FirebaseDatabase.getInstance().getReference("Anxiety");
         databaseReferenced= FirebaseDatabase.getInstance().getReference("Depression");
         System.out.println("user is logged in home ------"+ FirebaseAuth.getInstance().getCurrentUser());
-//        databaseReference= FirebaseDatabase.getInstance().getReference("Stress"+"Depression"+"Anxiety");
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {

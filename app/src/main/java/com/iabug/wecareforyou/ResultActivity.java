@@ -1,7 +1,6 @@
 package com.iabug.wecareforyou;
 
 import static com.iabug.wecareforyou.QuizActivity.count;
-//import static com.iabug.wecareforyou.HomeActivity.count;
 import static com.iabug.wecareforyou.QuizActivity.res;
 import static com.iabug.wecareforyou.QuizActivity.index;
 import static com.iabug.wecareforyou.QuizActivity.arsize;
@@ -13,26 +12,17 @@ import static com.iabug.wecareforyou.SignUpActivity.userid;
 //import static com.iabug.wecareforyou.SignUpActivity.db;
 
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.TextView;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.HashMap;
 import java.util.Map;
-
-import javax.xml.transform.Result;
 
 
 public class ResultActivity extends AppCompatActivity {
@@ -40,11 +30,8 @@ public class ResultActivity extends AppCompatActivity {
     public static TextView result2;
     public static TextView result3;
     private FirebaseAuth auth;
-
     String userif;
     String resstore;
-    DataSnapshot snapshot;
-    QuerySnapshot query;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,87 +50,88 @@ public class ResultActivity extends AppCompatActivity {
 
         if (index >= arsize - 1) {
             System.out.println("----------------------------IN update result-------------------------------------");
-            if (res >= 0 && res <= 13) {
-                System.out.println(res + "/40 " + " Low stress");
-                result.setText("Low Stress");
+            if (res >= 0 && res <= 14) {
+                System.out.println(res + "/40 " + " Normal/ Not Stressed");
+                result.setText("Normal/ Not Stressed");
 //                res=0;
             }
-            if (res >= 14 && res <= 26) {
+            if (res >= 15 && res <= 18) {
+                System.out.println(res + "/40 " + " Mild Stress");
+                result.setText("Mild Stress");
+//                res=0;
+            }
+            if (res >= 19 && res <= 25) {
                 System.out.println(res + "/40 " + " Moderate stress");
-                result.setText(" Moderate stress");
+                result.setText("Moderate Stress");
 //                res=0;
             }
-            if (res >= 27 && res <= 100) {
-                System.out.println(res + "/40 " + "  High perceived stress");
-                result.setText(" High perceived stress");
+            if (res >= 26 && res <= 33) {
+                System.out.println(res + "/40 " + " SevereSevere stress");
+                result.setText(" Severe stress");
 //                res=0;
             }
-            if (resa >= 0 && resa <= 13) {
-                System.out.println(resa + "/40 " + " Low stress");
-                result2.setText("Low Anxiety");
+            if (res >= 34){// && res <= 100) {
+                System.out.println(res + "/40 " + "  Extremely Severe stress");
+                result.setText(" Extremely Severe stress");
+//                res=0;
+            }
+            if (resa >= 0 && resa <= 7) {
+                System.out.println(resa + "/40 " + " Normal / No anxiety");
+                result2.setText("Normal / No anxiety");
 //                resa=0;
             }
-            if (resa >= 14 && resa <= 26) {
-                System.out.println(resa + "/40 " + " Moderate stress");
-                result2.setText(" Moderate Anxiety");
+            if (resa >= 8 && resa <= 9) {
+                System.out.println(resa + "/40 " + " Mild Anxiety");
+                result2.setText("Mild Anxiety");
 //                resa=0;
             }
-            if (resa >= 27 && resa <= 100) {
-                System.out.println(resa + "/40 " + "  High perceived anxiety");
-                result2.setText(" High  Anxiety");
+            if (resa >= 10 && resa <= 14) {
+                System.out.println(resa + "/40 " + " Moderate Anxiety");
+                result2.setText("Moderate Anxiety");
 //                resa=0;
             }
-            if (resd >= 0 && resd <= 13) {
-                System.out.println(resd + "/40 " + " Low stress");
-                result3.setText("Low depression");
+            if (resa >= 15 && resa <= 19) {
+                System.out.println(resa + "/40 " + " Severe Anxiety");
+                result2.setText(" Severe Anxiety");
+//                resa=0;
+            }
+            if (resa >= 20){// && resa <= 100) {
+                System.out.println(resa + "/40 " + "  Extremely Severe Anxiety");
+                result2.setText(" Extremely Severe Anxiety");
+//                resa=0;
+            }
+            if (resd >= 0 && resd <= 9) {
+                System.out.println(resd + "/40 " + " Normal / Not Depressed");
+                result3.setText("Normal / Not Depressed");
 //                resd=0;
             }
-            if (resd >= 14 && resd <= 26) {
-                System.out.println(resd + "/40 " + " Moderate stress");
-                result3.setText(" Moderate depression");
+            if (resd >= 10 && resd <= 13) {
+                System.out.println(resd + "/40 " + " Mild depression");
+                result3.setText("Mild depression");
 //                resd=0;
             }
-            if (resd >= 27 && resd <= 100) {
-                System.out.println(resd + "/40 " + "  High perceived depression");
-                result3.setText(" High depression");
+            if (resd >= 14 && resd <= 20) {
+                System.out.println(resd + "/40 " + " Moderate depression");
+                result3.setText("Moderate depression");
+//                resd=0;
+            }
+            if (resd >=21 && resd <= 27) {
+                System.out.println(resd + "/40 " + " Severe depression");
+                result3.setText(" Severe depression");
+//                resd=0;
+            }
+            if (resd >= 28){// && resd <= 100) {
+                System.out.println(resd + "/40 " + "  Extremely Severe depression");
+                result3.setText(" Extremely Severe depression");
 //                resd=0;
             }
             index = 0;
         }
-//        db.collection(userif).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-//            @Override
-//            public void onComplete(@NonNull Task<QuerySnapshot> task) {
-//                count=task.getResult().size();
-//            }
-//        });
-
-//
-        System.out.println("user count before is ---"+ count);
-//        db.collection(userif).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-//            @Override
-//            public void onComplete(@NonNull Task<QuerySnapshot> task) {
-//                count=task.getResult().size();
-//            }
-//        });
-//        db.collection(userif).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-//        @Override
-//        public void onComplete(@NonNull Task<QuerySnapshot> task) {
-//            count = task.getResult().size();
-//            System.out.println("sizeof task is -------"+task.getResult().size());
-//            System.out.println("user is count is  ------"+ count);
-//            resstore="Result"+count;
-//            System.out.println("user is -----"+userif);
-//            System.out.println("resstore-----"+resstore);
-//
-//        }
-//        });
         System.out.println("user is count is  ------"+ count);
         resstore="Result"+count;
-
         System.out.println("user is -----"+userif);
         System.out.println("resstore-----"+resstore);
 //        userid=FirebaseAuth.getInstance().getCurrentUser();
-
             DocumentReference documentReference = db.collection(userif).document(resstore);
             Map<String, Object> user = new HashMap<>();
 //            user.put("Results", res);
@@ -151,10 +139,9 @@ public class ResultActivity extends AppCompatActivity {
             user.put("Anxiety", resa);
             user.put("Depression", resd);
             documentReference.set(user);
-            res=0;
-            resa=0;
-            resd=0;
-
+        res=0;
+        resa=0;
+        resd=0;
 
         }
 

@@ -22,9 +22,9 @@ import com.google.firebase.auth.FirebaseAuth;
 public class LoginActivity extends AppCompatActivity {
 
 
-    private Button reset_password;
+//    private Button reset_password;
 
-    private Button sign_in_details_button,reset_password_button;
+    private Button sign_in_details_button;//,reset_password_button;
     private TextView signuptext,forgottext;
     private EditText email_TV, password_TV;
     private FirebaseAuth auth;
