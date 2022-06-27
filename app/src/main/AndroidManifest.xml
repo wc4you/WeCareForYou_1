@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WeCareForYou">
         <activity
+            android:name=".PlayActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MusicListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MusicActivity"
+            android:exported="false" />
+        <activity
             android:name=".HomeActivity"
             android:exported="false" />
         <activity

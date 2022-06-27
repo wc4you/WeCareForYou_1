@@ -27,7 +27,9 @@ import java.util.Collections;
 
 public class HomeActivity extends AppCompatActivity {
     LinearLayout ll1;
+    LinearLayout ll2;
     TextView tv;
+    TextView tv2;
     public static ArrayList<ModelClass> List;
     public static int count=0;
     DatabaseReference databaseReference;
@@ -43,6 +45,13 @@ public class HomeActivity extends AppCompatActivity {
         tv=(TextView)findViewById(R.id.textView3);
         tv.setText("Take on your assessment");
         ll1=(LinearLayout) findViewById(R.id.linearlayout1);
+        ll2=(LinearLayout)findViewById(R.id.linearlayout2);
+        tv2=(TextView)findViewById(R.id.textView4);
+        tv2.setText("Listein to Relaxing  Music");
+        ll2.setOnClickListener(v->{
+            Intent intent =new Intent(HomeActivity.this,MusicActivity.class);
+            startActivity(intent);
+        });
 
         List =new ArrayList<>();
 
