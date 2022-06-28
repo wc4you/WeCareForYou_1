@@ -1,33 +1,28 @@
 package com.iabug.wecareforyou;
 
-import static com.iabug.wecareforyou.QuizActivity.index;
 import static com.iabug.wecareforyou.QuizActivity.arsize;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class HomeActivity extends AppCompatActivity {
     LinearLayout ll1;
     LinearLayout ll2;
+    LinearLayout ll3;
     TextView tv;
     TextView tv2;
     public static ArrayList<ModelClass> List;
@@ -46,10 +41,16 @@ public class HomeActivity extends AppCompatActivity {
         tv.setText("Take on your assessment");
         ll1=(LinearLayout) findViewById(R.id.linearlayout1);
         ll2=(LinearLayout)findViewById(R.id.linearlayout2);
+        ll3=(LinearLayout)findViewById(R.id.linearlayout3);
+
         tv2=(TextView)findViewById(R.id.textView4);
         tv2.setText("Listein to Relaxing  Music");
         ll2.setOnClickListener(v->{
             Intent intent =new Intent(HomeActivity.this,MusicActivity.class);
+            startActivity(intent);
+        });
+        ll3.setOnClickListener(v->{
+            Intent intent =new Intent(HomeActivity.this,ToDoActivity.class);
             startActivity(intent);
         });
 

@@ -1,13 +1,13 @@
 package com.iabug.wecareforyou;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MusicActivity extends AppCompatActivity {
 
@@ -42,7 +42,7 @@ public class MusicActivity extends AppCompatActivity {
         classtxt=(TextView) findViewById(R.id.Classicaltxt);
         insttxt=(TextView) findViewById(R.id.instrumentaltxt);
         ambtxt=(TextView) findViewById(R.id.ambienttxt);
-        nbutton=(Button)findViewById(R.id.button);
+//        nbutton=(Button)findViewById(R.id.button);
         natbut=false;
         clasbut=false;
         insbut=false;
