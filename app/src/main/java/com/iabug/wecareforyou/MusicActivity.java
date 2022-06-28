@@ -21,8 +21,7 @@ public class MusicActivity extends AppCompatActivity {
     TextView classtxt;
     TextView insttxt;
     TextView ambtxt;
-    Button nbutton;
-     public static boolean natbut;
+    public static boolean natbut;
      public static boolean clasbut;
      public static boolean insbut;
      public static boolean ambbut;
