@@ -22,6 +22,10 @@ public class MusicActivity extends AppCompatActivity {
     TextView insttxt;
     TextView ambtxt;
     Button nbutton;
+     public static boolean natbut;
+     public static boolean clasbut;
+     public static boolean insbut;
+     public static boolean ambbut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +43,10 @@ public class MusicActivity extends AppCompatActivity {
         insttxt=(TextView) findViewById(R.id.instrumentaltxt);
         ambtxt=(TextView) findViewById(R.id.ambienttxt);
         nbutton=(Button)findViewById(R.id.button);
-
+        natbut=false;
+        clasbut=false;
+        insbut=false;
+        ambbut=false;
 //        natimg.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
@@ -49,16 +56,75 @@ public class MusicActivity extends AppCompatActivity {
 //
 //            }
 //        });
-
-        nbutton.setOnClickListener(new View.OnClickListener() {
+        nattxt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 //                img.setImageResource(R.mipmap.ic_launcher_natureimage);
-//                textimg.setText((CharSequence) nattxt);
+//                textimg.setText("Nature Sounds");
+                natbut=true;
                 Intent intent=new Intent(MusicActivity.this,MusicListActivity.class);
                 startActivity(intent);
             }
         });
+        natimg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                natbut=true;
+                Intent intent=new Intent(MusicActivity.this,MusicListActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        classtxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                clasbut=true;
+                Intent intent=new Intent(MusicActivity.this,MusicListActivity.class);
+                startActivity(intent);
+
+            }
+        });
+        classimg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                clasbut=true;
+                Intent intent=new Intent(MusicActivity.this,MusicListActivity.class);
+                startActivity(intent);
+            }
+        });
+        insttxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                insbut=true;
+                Intent intent=new Intent(MusicActivity.this,MusicListActivity.class);
+                startActivity(intent);
+            }
+        });
+        instimg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                insbut=true;
+                Intent intent=new Intent(MusicActivity.this,MusicListActivity.class);
+                startActivity(intent);
+            }
+        });
+        ambtxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ambbut=true;
+                Intent intent=new Intent(MusicActivity.this,MusicListActivity.class);
+                startActivity(intent);
+            }
+        });
+        ambimg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ambbut=true;
+                Intent intent=new Intent(MusicActivity.this,MusicListActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
 
     }

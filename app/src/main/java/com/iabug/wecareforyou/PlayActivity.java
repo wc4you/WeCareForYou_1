@@ -33,8 +33,6 @@ public class PlayActivity extends AppCompatActivity {
     DatabaseReference databaseReference;
 
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,7 +50,6 @@ public class PlayActivity extends AppCompatActivity {
                 System.out.println("keyof music -------"+String.valueOf(snapshot.getValue()));
 
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
@@ -122,7 +119,6 @@ public class PlayActivity extends AppCompatActivity {
 //                int timeRemaining = finalTime - timeElapsed;
                 tottime.setText(String.format("%d:%d ", TimeUnit.MILLISECONDS.toMinutes((long) finalTime), TimeUnit.MILLISECONDS.toSeconds((long) finalTime) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes((long) finalTime))));
                 progtime.setText(String.format("%d:%d ", TimeUnit.MILLISECONDS.toMinutes((long) timeElapsed), TimeUnit.MILLISECONDS.toSeconds((long) timeElapsed) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes((long) timeElapsed))));
-
             }
 
             @Override

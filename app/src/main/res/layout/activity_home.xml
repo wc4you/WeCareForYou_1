@@ -77,4 +77,17 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="369dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="36dp"
+        android:background="#DDECB2"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearlayout2"
+        app:layout_constraintVertical_bias="0.523"></LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
