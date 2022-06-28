@@ -32,6 +32,7 @@
             android:layout_width="146dp"
             android:layout_height="156dp"
             android:layout_marginLeft="35dp"
+            android:layout_marginTop="20dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@mipmap/ic_launcher_natureimage" />
@@ -40,8 +41,10 @@
             android:id="@+id/classicalimg"
             android:layout_width="146dp"
             android:layout_height="156dp"
+            android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/natureimg"
+            app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@mipmap/ic_launcher_classicalimage"
             tools:ignore="MissingConstraints" />
 
@@ -117,17 +120,6 @@
             app:layout_constraintStart_toEndOf="@+id/ambienttxt"
             app:layout_constraintTop_toBottomOf="@+id/instrumentalimg"
             app:layout_constraintVertical_bias="0.078" />
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Button"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.815" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
