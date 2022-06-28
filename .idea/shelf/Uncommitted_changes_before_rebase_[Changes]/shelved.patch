@@ -1,0 +1,270 @@
+Index: app/src/main/res/layout/activity_music.xml
+===================================================================
+diff --git a/app/src/main/res/layout/activity_music.xml b/app/src/main/res/layout/activity_music.xml
+new file mode 100644
+--- /dev/null	
++++ b/app/src/main/res/layout/activity_music.xml	
+@@ -0,0 +1,127 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".MusicActivity">
++
++    <TextView
++        android:id="@+id/textView7"
++        android:layout_width="312dp"
++        android:layout_height="84dp"
++        android:gravity="center"
++        android:text="Relaxing music "
++        android:textSize="34sp"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent" />
++
++    <ScrollView
++        android:layout_width="410dp"
++        android:layout_height="648dp"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="1.0"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/textView7"
++        app:layout_constraintVertical_bias="0.0">
++
++        <androidx.constraintlayout.widget.ConstraintLayout
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content">
++
++            <ImageView
++                android:id="@+id/natureimg"
++                android:layout_width="141dp"
++                android:layout_height="169dp"
++                android:layout_marginTop="25dp"
++                android:layout_marginStart="44dp"
++                app:layout_constraintStart_toStartOf="parent"
++                app:layout_constraintTop_toTopOf="parent"
++                app:srcCompat="@mipmap/ic_launcher_natureimage" />
++
++            <TextView
++                android:id="@+id/naturetxt"
++                android:layout_width="141dp"
++                android:layout_height="22dp"
++                android:layout_marginLeft="45dp"
++                android:gravity="center"
++                android:text="Nature Sounds"
++                android:textSize="16sp"
++                android:textStyle="bold"
++                app:layout_constraintStart_toStartOf="parent"
++                app:layout_constraintTop_toBottomOf="@+id/natureimg" />
++
++            <ImageView
++                android:id="@+id/ambientimg"
++                android:layout_width="141dp"
++                android:layout_height="169dp"
++                android:layout_marginLeft="45dp"
++                android:layout_marginTop="25dp"
++                android:layout_marginRight="45dp"
++                app:layout_constraintEnd_toEndOf="parent"
++                app:layout_constraintStart_toEndOf="@+id/natureimg"
++                app:layout_constraintTop_toTopOf="parent"
++                app:srcCompat="@mipmap/ic_launcher_ambientimage" />
++
++            <TextView
++                android:id="@+id/ambienttxt"
++                android:layout_width="141dp"
++                android:layout_height="22dp"
++                android:gravity="center"
++                android:text="Ambient Sounds"
++                android:textSize="16sp"
++                android:textStyle="bold"
++                app:layout_constraintEnd_toEndOf="parent"
++                app:layout_constraintStart_toEndOf="@+id/naturetxt"
++                app:layout_constraintTop_toBottomOf="@+id/ambientimg" />
++
++            <ImageView
++                android:id="@+id/classicalimg"
++                android:layout_width="141dp"
++                android:layout_height="169dp"
++                android:layout_marginTop="15dp"
++                android:layout_marginLeft="45dp"
++                app:layout_constraintStart_toStartOf="parent"
++                app:layout_constraintTop_toBottomOf="@+id/naturetxt"
++                app:srcCompat="@mipmap/ic_launcher_classicalimage" />
++
++            <TextView
++                android:id="@+id/classicaltxt"
++                android:layout_width="141dp"
++                android:layout_height="22dp"
++                android:gravity="center"
++                android:layout_marginLeft="45dp"
++                android:text="Classical Sounds"
++                android:textSize="16sp"
++                android:textStyle="bold"
++                app:layout_constraintStart_toStartOf="parent"
++                app:layout_constraintTop_toBottomOf="@+id/classicalimg" />
++
++            <ImageView
++                android:id="@+id/instrumentalimg"
++                android:layout_width="141dp"
++                android:layout_height="169dp"
++                android:layout_marginTop="15dp"
++                app:layout_constraintEnd_toEndOf="parent"
++                app:layout_constraintStart_toEndOf="@+id/classicalimg"
++                app:layout_constraintTop_toBottomOf="@+id/ambienttxt"
++                app:srcCompat="@mipmap/ic_launcher_instrumentalimage" />
++
++            <TextView
++                android:id="@+id/instrumentaltxt"
++                android:layout_width="141dp"
++                android:layout_height="wrap_content"
++                android:gravity="center"
++                android:text="Instrumental Sounds"
++                android:textSize="16sp"
++                android:textStyle="bold"
++                app:layout_constraintEnd_toEndOf="parent"
++                app:layout_constraintStart_toEndOf="@+id/classicaltxt"
++                app:layout_constraintTop_toBottomOf="@+id/instrumentalimg" />
++
++        </androidx.constraintlayout.widget.ConstraintLayout>
++    </ScrollView>
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_music.xml
+===================================================================
+diff --git a/app/src/main/res/layout/activity_music.xml b/app/src/main/res/layout/activity_music.xml
+new file mode 100644
+--- /dev/null	
++++ b/app/src/main/res/layout/activity_music.xml	
+@@ -0,0 +1,127 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".MusicActivity">
++
++    <TextView
++        android:id="@+id/textView7"
++        android:layout_width="312dp"
++        android:layout_height="84dp"
++        android:gravity="center"
++        android:text="Relaxing music "
++        android:textSize="34sp"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent" />
++
++    <ScrollView
++        android:layout_width="410dp"
++        android:layout_height="648dp"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="1.0"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/textView7"
++        app:layout_constraintVertical_bias="0.0">
++
++        <androidx.constraintlayout.widget.ConstraintLayout
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content">
++
++            <ImageView
++                android:id="@+id/natureimg"
++                android:layout_width="141dp"
++                android:layout_height="169dp"
++                android:layout_marginTop="25dp"
++                android:layout_marginStart="44dp"
++                app:layout_constraintStart_toStartOf="parent"
++                app:layout_constraintTop_toTopOf="parent"
++                app:srcCompat="@mipmap/ic_launcher_natureimage" />
++
++            <TextView
++                android:id="@+id/naturetxt"
++                android:layout_width="141dp"
++                android:layout_height="22dp"
++                android:layout_marginLeft="45dp"
++                android:gravity="center"
++                android:text="Nature Sounds"
++                android:textSize="16sp"
++                android:textStyle="bold"
++                app:layout_constraintStart_toStartOf="parent"
++                app:layout_constraintTop_toBottomOf="@+id/natureimg" />
++
++            <ImageView
++                android:id="@+id/ambientimg"
++                android:layout_width="141dp"
++                android:layout_height="169dp"
++                android:layout_marginLeft="45dp"
++                android:layout_marginTop="25dp"
++                android:layout_marginRight="45dp"
++                app:layout_constraintEnd_toEndOf="parent"
++                app:layout_constraintStart_toEndOf="@+id/natureimg"
++                app:layout_constraintTop_toTopOf="parent"
++                app:srcCompat="@mipmap/ic_launcher_ambientimage" />
++
++            <TextView
++                android:id="@+id/ambienttxt"
++                android:layout_width="141dp"
++                android:layout_height="22dp"
++                android:gravity="center"
++                android:text="Ambient Sounds"
++                android:textSize="16sp"
++                android:textStyle="bold"
++                app:layout_constraintEnd_toEndOf="parent"
++                app:layout_constraintStart_toEndOf="@+id/naturetxt"
++                app:layout_constraintTop_toBottomOf="@+id/ambientimg" />
++
++            <ImageView
++                android:id="@+id/classicalimg"
++                android:layout_width="141dp"
++                android:layout_height="169dp"
++                android:layout_marginTop="15dp"
++                android:layout_marginLeft="45dp"
++                app:layout_constraintStart_toStartOf="parent"
++                app:layout_constraintTop_toBottomOf="@+id/naturetxt"
++                app:srcCompat="@mipmap/ic_launcher_classicalimage" />
++
++            <TextView
++                android:id="@+id/classicaltxt"
++                android:layout_width="141dp"
++                android:layout_height="22dp"
++                android:gravity="center"
++                android:layout_marginLeft="45dp"
++                android:text="Classical Sounds"
++                android:textSize="16sp"
++                android:textStyle="bold"
++                app:layout_constraintStart_toStartOf="parent"
++                app:layout_constraintTop_toBottomOf="@+id/classicalimg" />
++
++            <ImageView
++                android:id="@+id/instrumentalimg"
++                android:layout_width="141dp"
++                android:layout_height="169dp"
++                android:layout_marginTop="15dp"
++                app:layout_constraintEnd_toEndOf="parent"
++                app:layout_constraintStart_toEndOf="@+id/classicalimg"
++                app:layout_constraintTop_toBottomOf="@+id/ambienttxt"
++                app:srcCompat="@mipmap/ic_launcher_instrumentalimage" />
++
++            <TextView
++                android:id="@+id/instrumentaltxt"
++                android:layout_width="141dp"
++                android:layout_height="wrap_content"
++                android:gravity="center"
++                android:text="Instrumental Sounds"
++                android:textSize="16sp"
++                android:textStyle="bold"
++                app:layout_constraintEnd_toEndOf="parent"
++                app:layout_constraintStart_toEndOf="@+id/classicaltxt"
++                app:layout_constraintTop_toBottomOf="@+id/instrumentalimg" />
++
++        </androidx.constraintlayout.widget.ConstraintLayout>
++    </ScrollView>
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
