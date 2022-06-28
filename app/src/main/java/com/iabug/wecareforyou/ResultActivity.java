@@ -14,7 +14,10 @@ import static com.iabug.wecareforyou.SignUpActivity.userid;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -32,6 +35,7 @@ public class ResultActivity extends AppCompatActivity {
     private FirebaseAuth auth;
     String userif;
     String resstore;
+    Button rethom;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +43,7 @@ public class ResultActivity extends AppCompatActivity {
         result = findViewById(R.id.textView);
         result2 = findViewById(R.id.textView2);
         result3 = findViewById(R.id.textView5);
+        rethom=(Button)findViewById(R.id.button2);
         res = res * 2;
         resa = resa * 2;
         resd = resd * 2;
@@ -142,6 +147,13 @@ public class ResultActivity extends AppCompatActivity {
         res=0;
         resa=0;
         resd=0;
+        rethom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(ResultActivity.this,HomeActivity.class);
+                startActivity(intent);
+            }
+        });
 
         }
 

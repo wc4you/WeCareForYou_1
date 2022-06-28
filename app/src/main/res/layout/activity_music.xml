@@ -108,8 +108,8 @@
 
         <TextView
             android:id="@+id/instrumentaltxt"
-            android:layout_width="146dp"
-            android:layout_height="wrap_content"
+            android:layout_width="173dp"
+            android:layout_height="71dp"
             android:layout_marginTop="10dp"
             android:gravity="center"
             android:text="Instrumental Sounds"
