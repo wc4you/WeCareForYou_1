@@ -4,66 +4,71 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#8AEDE5"
+    android:background="#FFFFFF"
     tools:context=".ResultActivity">
-<ScrollView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:gravity="center"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="0.144">
-    <LinearLayout
-        android:layout_width="336dp"
+
+    <ScrollView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:orientation="vertical">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="10dp"
-            android:background="#00BCD4" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.144">
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="336dp"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal|center_vertical"
-            android:text="Stress Result"
-            android:textColor="#000"
-            android:textSize="24sp" />
+            android:gravity="center"
+            android:orientation="vertical">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="10dp"
-            android:background="#00BCD4" />
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal|center_vertical"
-            android:text="Anxiety Result"
-            android:textColor="#000"
-            android:textSize="24sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#00BCD4" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="10dp"
-            android:background="#00BCD4" />
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Stress Result"
+                android:textColor="#000"
+                android:textSize="24sp" />
 
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal|center_vertical"
-            android:text="Stress Result"
-            android:textColor="#000"
-            android:textSize="24sp" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="10dp"
-            android:background="#00BCD4" />
-    </LinearLayout>
-</ScrollView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#00BCD4" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Anxiety Result"
+                android:textColor="#000"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#00BCD4" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Stress Result"
+                android:textColor="#000"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#00BCD4" />
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

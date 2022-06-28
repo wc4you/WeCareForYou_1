@@ -25,6 +25,7 @@ public class HomeActivity extends AppCompatActivity {
     LinearLayout ll3;
     TextView tv;
     TextView tv2;
+    TextView tv3;
     public static ArrayList<ModelClass> List;
     public static int count=0;
     DatabaseReference databaseReference;
@@ -49,6 +50,8 @@ public class HomeActivity extends AppCompatActivity {
             Intent intent =new Intent(HomeActivity.this,MusicActivity.class);
             startActivity(intent);
         });
+        tv3=(TextView)findViewById(R.id.textView5);
+        tv3.setText("Make Your To Do List");
         ll3.setOnClickListener(v->{
             Intent intent =new Intent(HomeActivity.this,ToDoActivity.class);
             startActivity(intent);

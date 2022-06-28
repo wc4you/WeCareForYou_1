@@ -2,8 +2,17 @@ package com.iabug.wecareforyou;
 
 import static com.iabug.wecareforyou.MusicListActivity.mediaPlayer;
 import static com.iabug.wecareforyou.MusicListActivity.textb1;
+import static com.iabug.wecareforyou.MusicListActivity.textb10;
+import static com.iabug.wecareforyou.MusicListActivity.textb11;
+import static com.iabug.wecareforyou.MusicListActivity.textb12;
 import static com.iabug.wecareforyou.MusicListActivity.textb2;
 import static com.iabug.wecareforyou.MusicListActivity.textb3;
+import static com.iabug.wecareforyou.MusicListActivity.textb4;
+import static com.iabug.wecareforyou.MusicListActivity.textb5;
+import static com.iabug.wecareforyou.MusicListActivity.textb6;
+import static com.iabug.wecareforyou.MusicListActivity.textb7;
+import static com.iabug.wecareforyou.MusicListActivity.textb8;
+import static com.iabug.wecareforyou.MusicListActivity.textb9;
 
 import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
@@ -33,12 +42,9 @@ import java.util.TimerTask;
 import java.util.concurrent.TimeUnit;
 
 public class PlayActivity extends AppCompatActivity {
-    Button plbutton;
     Button pabutton;
     SeekBar seekb;
     EditText progtime;
-    TextView progtim;
-    TextView tottim;
     EditText tottime;
     ImageView clbut;
     public static TextView Sname;
@@ -64,13 +70,53 @@ public class PlayActivity extends AppCompatActivity {
 
         if(textb1){
             Sname.setText("Forest Sounds");
+            textb1=false;
         }
         else if(textb2){
             Sname.setText("River Sounds");
+            textb2=false;
         }
         else if(textb3){
             Sname.setText("Rain Sounds");
+            textb3=false;
         }
+        else if(textb4){
+            Sname.setText("Relaxing Classic");
+            textb4=false;
+        }
+        else if(textb5){
+            Sname.setText("Classic Violin");
+            textb5=false;
+        }
+        else if(textb6){
+            Sname.setText("Mozart Classic");
+            textb6=false;
+        }
+        else if(textb7){
+            Sname.setText("Relaxing flute");
+            textb7=false;
+        }
+        else if(textb8){
+            Sname.setText("Relaxing Piano");
+            textb8=false;
+        }
+        else if(textb9){
+            Sname.setText("Relaxing Instrumental Mix");
+            textb9=false;
+        }
+        else if(textb10){
+            Sname.setText("Galaxy Sounds");
+            textb10=false;
+        }
+        else if(textb11){
+            Sname.setText("Medatation Sounds");
+            textb11=false;
+        }
+        else if(textb12){
+            Sname.setText("Space Sounds");
+            textb12=false;
+        }
+
 
 
         databaseReference= FirebaseDatabase.getInstance().getReference("Music");

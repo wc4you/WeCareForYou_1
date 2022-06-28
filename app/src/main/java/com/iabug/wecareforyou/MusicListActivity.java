@@ -131,43 +131,229 @@ public class MusicListActivity extends AppCompatActivity {
         else if(clasbut){
             image.setImageResource(R.mipmap.ic_launcher_classicalimage);
             text.setText("Classical Sounds");
+            text1.setText("Relaxing Classic");
+            text2.setText("Classic Violin");
+            text3.setText("Mozart Classic");
+            text1.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View view) {
+                    try {
+
+                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/finalyear-628f8.appspot.com/o/ForestSounds.mp3?alt=media&token=dc3f20b2-316d-4c60-a2c3-40551d347171");
+                        mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                            @Override
+                            public void onPrepared(MediaPlayer mediaPlayer) {
+                                mediaPlayer.start();
+                            }
+                        });
+                        mediaPlayer.prepare();
+                    }
+                    catch (IOException e){
+                        e.printStackTrace();
+                    }
+                    textb4=true;
+                    Intent intent=new Intent(MusicListActivity.this,PlayActivity.class);
+                    startActivity(intent);
+                }
+            });
+            text2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    try {
+
+                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/finalyear-628f8.appspot.com/o/RiverSounds.mp3?alt=media&token=d46056dd-0f64-4b61-bc21-3bbdc6c403fe");
+                        mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                            @Override
+                            public void onPrepared(MediaPlayer mediaPlayer) {
+                                mediaPlayer.start();
+                            }
+                        });
+                        mediaPlayer.prepare();
+                    }
+                    catch (IOException e){
+                        e.printStackTrace();
+                    }
+                    textb5=true;
+                    Intent intent=new Intent(MusicListActivity.this,PlayActivity.class);
+                    startActivity(intent);
+                }
+            });
+            text3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    try {
+
+                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/finalyear-628f8.appspot.com/o/RainSounds.mp3?alt=media&token=67e966c9-d9f9-44fd-be0f-68c6f87abf76");
+                        mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                            @Override
+                            public void onPrepared(MediaPlayer mediaPlayer) {
+                                mediaPlayer.start();
+                            }
+                        });
+                        mediaPlayer.prepare();
+                    }
+                    catch (IOException e){
+                        e.printStackTrace();
+                    }
+                    textb6=true;
+                    Intent intent=new Intent(MusicListActivity.this,PlayActivity.class);
+                    startActivity(intent);
+                }
+            });
             clasbut=false;
         }
         else if(insbut){
             image.setImageResource(R.mipmap.ic_launcher_instrumentalimage);
             text.setText("Instrumental Sounds");
+            text1.setText("Relaxing flute");
+            text2.setText("Relaxing Piano");
+            text3.setText("Relaxing Instrumental Mix");
+            text1.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View view) {
+                    try {
+
+                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/finalyear-628f8.appspot.com/o/ForestSounds.mp3?alt=media&token=dc3f20b2-316d-4c60-a2c3-40551d347171");
+                        mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                            @Override
+                            public void onPrepared(MediaPlayer mediaPlayer) {
+                                mediaPlayer.start();
+                            }
+                        });
+                        mediaPlayer.prepare();
+                    }
+                    catch (IOException e){
+                        e.printStackTrace();
+                    }
+                    textb7=true;
+                    Intent intent=new Intent(MusicListActivity.this,PlayActivity.class);
+                    startActivity(intent);
+                }
+            });
+            text2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    try {
+
+                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/finalyear-628f8.appspot.com/o/RiverSounds.mp3?alt=media&token=d46056dd-0f64-4b61-bc21-3bbdc6c403fe");
+                        mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                            @Override
+                            public void onPrepared(MediaPlayer mediaPlayer) {
+                                mediaPlayer.start();
+                            }
+                        });
+                        mediaPlayer.prepare();
+                    }
+                    catch (IOException e){
+                        e.printStackTrace();
+                    }
+                    textb8=true;
+                    Intent intent=new Intent(MusicListActivity.this,PlayActivity.class);
+                    startActivity(intent);
+                }
+            });
+            text3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    try {
+
+                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/finalyear-628f8.appspot.com/o/RainSounds.mp3?alt=media&token=67e966c9-d9f9-44fd-be0f-68c6f87abf76");
+                        mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                            @Override
+                            public void onPrepared(MediaPlayer mediaPlayer) {
+                                mediaPlayer.start();
+                            }
+                        });
+                        mediaPlayer.prepare();
+                    }
+                    catch (IOException e){
+                        e.printStackTrace();
+                    }
+                    textb9=true;
+                    Intent intent=new Intent(MusicListActivity.this,PlayActivity.class);
+                    startActivity(intent);
+                }
+            });
+
             insbut=false;
         }
         else if(ambbut){
             image.setImageResource(R.mipmap.ic_launcher_ambientimage);
             text.setText("Ambient Sounds");
+            text1.setText("Galaxy Sounds");
+            text2.setText("Medatation Sounds");
+            text3.setText("Space Sounds");
+            text1.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View view) {
+                    try {
+
+                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/finalyear-628f8.appspot.com/o/ForestSounds.mp3?alt=media&token=dc3f20b2-316d-4c60-a2c3-40551d347171");
+                        mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                            @Override
+                            public void onPrepared(MediaPlayer mediaPlayer) {
+                                mediaPlayer.start();
+                            }
+                        });
+                        mediaPlayer.prepare();
+                    }
+                    catch (IOException e){
+                        e.printStackTrace();
+                    }
+                    textb10=true;
+                    Intent intent=new Intent(MusicListActivity.this,PlayActivity.class);
+                    startActivity(intent);
+                }
+            });
+            text2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    try {
+
+                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/finalyear-628f8.appspot.com/o/RiverSounds.mp3?alt=media&token=d46056dd-0f64-4b61-bc21-3bbdc6c403fe");
+                        mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                            @Override
+                            public void onPrepared(MediaPlayer mediaPlayer) {
+                                mediaPlayer.start();
+                            }
+                        });
+                        mediaPlayer.prepare();
+                    }
+                    catch (IOException e){
+                        e.printStackTrace();
+                    }
+                    textb11=true;
+                    Intent intent=new Intent(MusicListActivity.this,PlayActivity.class);
+                    startActivity(intent);
+                }
+            });
+            text3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    try {
+
+                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/finalyear-628f8.appspot.com/o/RainSounds.mp3?alt=media&token=67e966c9-d9f9-44fd-be0f-68c6f87abf76");
+                        mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                            @Override
+                            public void onPrepared(MediaPlayer mediaPlayer) {
+                                mediaPlayer.start();
+                            }
+                        });
+                        mediaPlayer.prepare();
+                    }
+                    catch (IOException e){
+                        e.printStackTrace();
+                    }
+                    textb12=true;
+                    Intent intent=new Intent(MusicListActivity.this,PlayActivity.class);
+                    startActivity(intent);
+                }
+            });
             ambbut=false;
         }
-//        pbutton=(Button) findViewById(R.id.button5);
-//
-//        pbutton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-////                Uri myUri = Uri.parse("https://firebasestorage.googleapis.com/v0/b/finalyear-628f8.appspot.com/o/Sand%20and%20Sea.mp3?alt=media&token=f30efe8f-edf4-4b16-b61d-cffde58f0887");
-//                try {
-//
-//                    mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/finalyear-628f8.appspot.com/o/Sand%20and%20Sea.mp3?alt=media&token=f30efe8f-edf4-4b16-b61d-cffde58f0887");
-//                    mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-//                        @Override
-//                        public void onPrepared(MediaPlayer mediaPlayer) {
-//                            mediaPlayer.start();
-//                        }
-//                    });
-//                    mediaPlayer.prepare();
-//                }
-//                catch (IOException e){
-//                    e.printStackTrace();
-//                }
-//
-//                Intent intent=new Intent(MusicListActivity.this,PlayActivity.class);
-//                startActivity(intent);
-//            }
-//        });
     }
     @Override
     public void onBackPressed() {

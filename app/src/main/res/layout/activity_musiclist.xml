@@ -46,10 +46,11 @@
             android:id="@+id/textView9"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#D8EFDE"
+            android:background="@color/white"
             android:gravity="center"
             android:padding="5dp"
             android:text="TextView"
+            android:textColor="@android:color/secondary_text_light"
             android:textSize="20sp" />
 
         <TextView
@@ -57,10 +58,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:background="#D8EFDE"
+            android:background="@color/white"
             android:gravity="center"
             android:padding="5dp"
             android:text="TextView"
+            android:textColor="@android:color/secondary_text_light"
             android:textSize="20sp" />
 
         <TextView
@@ -68,10 +70,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:background="#D8EFDE"
-            android:padding="5dp"
+            android:background="@color/white"
             android:gravity="center"
+            android:padding="5dp"
             android:text="TextView"
+            android:textColor="@android:color/secondary_text_light"
             android:textSize="20sp" />
     </LinearLayout>
 
