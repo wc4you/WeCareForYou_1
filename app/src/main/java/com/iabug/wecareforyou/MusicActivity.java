@@ -127,4 +127,10 @@ public class MusicActivity extends AppCompatActivity {
 
 
     }
+    @Override
+    public void onBackPressed() {
+//        mediaPlayer.stop();
+        Intent intent=new Intent(MusicActivity.this,HomeActivity.class);
+        startActivity(intent);
+    }
 }
