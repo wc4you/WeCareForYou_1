@@ -70,13 +70,7 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(new Intent(LoginActivity.this, ResetpasswordActivity.class));
             }
         });
-//
-//        reset_password.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(SignInActivity.this, ResetPasswordActivity.class));
-//            }
-//        });
+
 
         sign_in_details_button.setOnClickListener(new View.OnClickListener() {
             @Override

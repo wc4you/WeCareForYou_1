@@ -52,6 +52,8 @@ public class MusicListActivity extends AppCompatActivity {
         text2= findViewById(R.id.textView10);
         text3= findViewById(R.id.textView11);
 
+        LoadingDialog loadingDialog=new LoadingDialog(MusicListActivity.this);
+
 
         if(natbut) {
         image.setImageResource(R.mipmap.ic_launcher_natureimage);
@@ -63,8 +65,9 @@ public class MusicListActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
+                loadingDialog.startLoadingDialog();
                 try {
-                    mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/finalyear-628f8.appspot.com/o/ForestSounds.mp3?alt=media&token=dc3f20b2-316d-4c60-a2c3-40551d347171");
+                    mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/wc4you-6b4db.appspot.com/o/Music%2FForestSounds.mp3?alt=media&token=36bab843-7447-4e31-baf5-27edd271e276");
                     mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                         @Override
                         public void onPrepared(MediaPlayer mediaPlayer) {
@@ -77,6 +80,8 @@ public class MusicListActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
                 textb1=true;
+                text2.setClickable(false);
+                text3.setClickable(false);
                 Intent intent=new Intent(MusicListActivity.this,PlayActivity.class);
                 startActivity(intent);
             }
@@ -85,8 +90,7 @@ public class MusicListActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 try {
-
-                    mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/finalyear-628f8.appspot.com/o/RiverSounds.mp3?alt=media&token=d46056dd-0f64-4b61-bc21-3bbdc6c403fe");
+                    mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/wc4you-6b4db.appspot.com/o/Music%2FRiverSounds.mp3?alt=media&token=3cc5a21b-24ea-427f-bc0f-a33812a33bde");
                     mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                         @Override
                         public void onPrepared(MediaPlayer mediaPlayer) {
@@ -99,6 +103,8 @@ public class MusicListActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
                 textb2=true;
+                text1.setClickable(false);
+                text3.setClickable(false);
                 Intent intent=new Intent(MusicListActivity.this,PlayActivity.class);
                 startActivity(intent);
             }
@@ -108,7 +114,7 @@ public class MusicListActivity extends AppCompatActivity {
             public void onClick(View view) {
                 try {
 
-                    mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/finalyear-628f8.appspot.com/o/RainSounds.mp3?alt=media&token=67e966c9-d9f9-44fd-be0f-68c6f87abf76");
+                    mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/wc4you-6b4db.appspot.com/o/Music%2FRainSounds.mp3?alt=media&token=d6fff301-4d5f-407c-93cf-4f743342d6ad");
                     mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                         @Override
                         public void onPrepared(MediaPlayer mediaPlayer) {
@@ -121,6 +127,8 @@ public class MusicListActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
                 textb3=true;
+                text1.setClickable(false);
+                text2.setClickable(false);
                 Intent intent=new Intent(MusicListActivity.this,PlayActivity.class);
                 startActivity(intent);
             }
@@ -139,7 +147,7 @@ public class MusicListActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     try {
 
-                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/finalyear-628f8.appspot.com/o/Classical%201.mp3?alt=media&token=2d123672-6fbf-4614-a56c-68e825e37329");
+                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/wc4you-6b4db.appspot.com/o/Music%2FClassical%201.mp3?alt=media&token=547c9276-877a-4d8e-bdf4-c400d2748d7f");
                         mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                             @Override
                             public void onPrepared(MediaPlayer mediaPlayer) {
@@ -152,6 +160,8 @@ public class MusicListActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
                     textb4=true;
+                    text2.setClickable(false);
+                    text3.setClickable(false);
                     Intent intent=new Intent(MusicListActivity.this,PlayActivity.class);
                     startActivity(intent);
                 }
@@ -161,7 +171,7 @@ public class MusicListActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     try {
 
-                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/finalyear-628f8.appspot.com/o/Classical%202.mp3?alt=media&token=ba27d7e1-17e1-4f31-9168-ac427c2a9de7");
+                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/wc4you-6b4db.appspot.com/o/Music%2FClassical%202.mp3?alt=media&token=1585d808-0969-4709-9b99-34a6394d9527");
                         mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                             @Override
                             public void onPrepared(MediaPlayer mediaPlayer) {
@@ -174,6 +184,8 @@ public class MusicListActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
                     textb5=true;
+                    text1.setClickable(false);
+                    text3.setClickable(false);
                     Intent intent=new Intent(MusicListActivity.this,PlayActivity.class);
                     startActivity(intent);
                 }
@@ -183,7 +195,7 @@ public class MusicListActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     try {
 
-                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/finalyear-628f8.appspot.com/o/Classical%203.mp3?alt=media&token=12d7136a-9db3-48c6-9eda-55262a2ed8e3");
+                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/wc4you-6b4db.appspot.com/o/Music%2FClassical%203.mp3?alt=media&token=60abb000-9061-4854-bcd7-3e03f3a175ab");
                         mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                             @Override
                             public void onPrepared(MediaPlayer mediaPlayer) {
@@ -196,11 +208,13 @@ public class MusicListActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
                     textb6=true;
+                    text1.setClickable(false);
+                    text2.setClickable(false);
                     Intent intent=new Intent(MusicListActivity.this,PlayActivity.class);
                     startActivity(intent);
                 }
             });
-            clasbut=false;
+
         }
         else if(insbut){
             image.setImageResource(R.mipmap.ic_launcher_instrumentalimage);
@@ -214,7 +228,7 @@ public class MusicListActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     try {
 
-                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/finalyear-628f8.appspot.com/o/Instrument%203%20Flute.mp3?alt=media&token=01ede345-1aae-4437-83c2-112884ad82fd");
+                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/wc4you-6b4db.appspot.com/o/Music%2FInstrument%203%20Flute.mp3?alt=media&token=30844804-2daa-4f05-b1b9-2660032b1281");
                         mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                             @Override
                             public void onPrepared(MediaPlayer mediaPlayer) {
@@ -227,6 +241,8 @@ public class MusicListActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
                     textb7=true;
+                    text2.setClickable(false);
+                    text3.setClickable(false);
                     Intent intent=new Intent(MusicListActivity.this,PlayActivity.class);
                     startActivity(intent);
                 }
@@ -236,7 +252,7 @@ public class MusicListActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     try {
 
-                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/finalyear-628f8.appspot.com/o/Instrument%202%20Piano.mp3?alt=media&token=59c31809-9b31-47fe-a04d-1d0470c53a02");
+                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/wc4you-6b4db.appspot.com/o/Music%2FInstrument%202%20Piano.mp3?alt=media&token=0a768512-94e7-4fb9-8df6-50eb74ea35fc");
                         mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                             @Override
                             public void onPrepared(MediaPlayer mediaPlayer) {
@@ -249,6 +265,8 @@ public class MusicListActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
                     textb8=true;
+                    text1.setClickable(false);
+                    text3.setClickable(false);
                     Intent intent=new Intent(MusicListActivity.this,PlayActivity.class);
                     startActivity(intent);
                 }
@@ -258,7 +276,7 @@ public class MusicListActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     try {
 
-                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/finalyear-628f8.appspot.com/o/RainSounds.mp3?alt=media&token=67e966c9-d9f9-44fd-be0f-68c6f87abf76");
+                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/wc4you-6b4db.appspot.com/o/Music%2FInstrument%201%20Mix.mp3?alt=media&token=fdd70423-51cf-49b9-ae5b-aa521f5a09b9");
                         mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                             @Override
                             public void onPrepared(MediaPlayer mediaPlayer) {
@@ -271,12 +289,14 @@ public class MusicListActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
                     textb9=true;
+                    text1.setClickable(false);
+                    text2.setClickable(false);
                     Intent intent=new Intent(MusicListActivity.this,PlayActivity.class);
                     startActivity(intent);
                 }
             });
 
-            insbut=false;
+
         }
         else if(ambbut){
             image.setImageResource(R.mipmap.ic_launcher_ambientimage);
@@ -290,7 +310,7 @@ public class MusicListActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     try {
 
-                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/finalyear-628f8.appspot.com/o/ForestSounds.mp3?alt=media&token=dc3f20b2-316d-4c60-a2c3-40551d347171");
+                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/wc4you-6b4db.appspot.com/o/Music%2FAmbient%201.mp3?alt=media&token=65272534-aa34-409b-8631-d1372ba8da4f");
                         mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                             @Override
                             public void onPrepared(MediaPlayer mediaPlayer) {
@@ -303,6 +323,8 @@ public class MusicListActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
                     textb10=true;
+                    text2.setClickable(false);
+                    text3.setClickable(false);
                     Intent intent=new Intent(MusicListActivity.this,PlayActivity.class);
                     startActivity(intent);
                 }
@@ -312,7 +334,7 @@ public class MusicListActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     try {
 
-                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/finalyear-628f8.appspot.com/o/RiverSounds.mp3?alt=media&token=d46056dd-0f64-4b61-bc21-3bbdc6c403fe");
+                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/wc4you-6b4db.appspot.com/o/Music%2FAmbient%202.mp3?alt=media&token=88374e07-c7d8-49a4-965a-4f07c33df6c2");
                         mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                             @Override
                             public void onPrepared(MediaPlayer mediaPlayer) {
@@ -325,6 +347,8 @@ public class MusicListActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
                     textb11=true;
+                    text1.setClickable(false);
+                    text3.setClickable(false);
                     Intent intent=new Intent(MusicListActivity.this,PlayActivity.class);
                     startActivity(intent);
                 }
@@ -334,7 +358,7 @@ public class MusicListActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     try {
 
-                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/finalyear-628f8.appspot.com/o/RainSounds.mp3?alt=media&token=67e966c9-d9f9-44fd-be0f-68c6f87abf76");
+                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/wc4you-6b4db.appspot.com/o/Music%2FAmbient%203.mp3?alt=media&token=81ecc152-8c80-4e69-b9a2-c3300debfd7c");
                         mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                             @Override
                             public void onPrepared(MediaPlayer mediaPlayer) {
@@ -347,11 +371,12 @@ public class MusicListActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
                     textb12=true;
+                    text1.setClickable(false);
+                    text2.setClickable(false);
                     Intent intent=new Intent(MusicListActivity.this,PlayActivity.class);
                     startActivity(intent);
                 }
             });
-            ambbut=false;
         }
     }
     @Override
