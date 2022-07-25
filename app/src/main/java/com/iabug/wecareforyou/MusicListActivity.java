@@ -67,7 +67,8 @@ public class MusicListActivity extends AppCompatActivity {
             public void onClick(View view) {
                 loadingDialog.startLoadingDialog();
                 try {
-                    mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/wc4you-6b4db.appspot.com/o/Music%2FForestSounds.mp3?alt=media&token=36bab843-7447-4e31-baf5-27edd271e276");
+//                    mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/wc4you-6b4db.appspot.com/o/Music%2FForestSounds.mp3?alt=media&token=36bab843-7447-4e31-baf5-27edd271e276");
+                    mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/finalyear-628f8.appspot.com/o/ForestSounds.mp3?alt=media&token=517e3539-e63a-4493-9202-2a8a74c3a5d2");
                     mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                         @Override
                         public void onPrepared(MediaPlayer mediaPlayer) {
@@ -90,7 +91,8 @@ public class MusicListActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 try {
-                    mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/wc4you-6b4db.appspot.com/o/Music%2FRiverSounds.mp3?alt=media&token=3cc5a21b-24ea-427f-bc0f-a33812a33bde");
+//                    mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/wc4you-6b4db.appspot.com/o/Music%2FRiverSounds.mp3?alt=media&token=3cc5a21b-24ea-427f-bc0f-a33812a33bde");
+                    mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/finalyear-628f8.appspot.com/o/RiverSounds.mp3?alt=media&token=4cb8ceb5-bfde-438d-82cf-d28e0289b33e");
                     mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                         @Override
                         public void onPrepared(MediaPlayer mediaPlayer) {
@@ -114,7 +116,8 @@ public class MusicListActivity extends AppCompatActivity {
             public void onClick(View view) {
                 try {
 
-                    mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/wc4you-6b4db.appspot.com/o/Music%2FRainSounds.mp3?alt=media&token=d6fff301-4d5f-407c-93cf-4f743342d6ad");
+//                    mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/wc4you-6b4db.appspot.com/o/Music%2FRainSounds.mp3?alt=media&token=d6fff301-4d5f-407c-93cf-4f743342d6ad");
+                    mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/finalyear-628f8.appspot.com/o/RainSounds11.mp3?alt=media&token=1d902de3-305d-478c-8abf-1cec6d2b9a05");
                     mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                         @Override
                         public void onPrepared(MediaPlayer mediaPlayer) {
@@ -147,7 +150,7 @@ public class MusicListActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     try {
 
-                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/wc4you-6b4db.appspot.com/o/Music%2FClassical%201.mp3?alt=media&token=547c9276-877a-4d8e-bdf4-c400d2748d7f");
+                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/finalyear-628f8.appspot.com/o/Classical%201.mp3?alt=media&token=239edb45-b802-4fa4-80e6-c07e537ec67f");
                         mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                             @Override
                             public void onPrepared(MediaPlayer mediaPlayer) {
@@ -171,7 +174,7 @@ public class MusicListActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     try {
 
-                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/wc4you-6b4db.appspot.com/o/Music%2FClassical%202.mp3?alt=media&token=1585d808-0969-4709-9b99-34a6394d9527");
+                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/finalyear-628f8.appspot.com/o/Classical%202.mp3?alt=media&token=06cf0e63-a8d2-4a27-9815-12a4b81056f5");
                         mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                             @Override
                             public void onPrepared(MediaPlayer mediaPlayer) {
@@ -195,7 +198,7 @@ public class MusicListActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     try {
 
-                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/wc4you-6b4db.appspot.com/o/Music%2FClassical%203.mp3?alt=media&token=60abb000-9061-4854-bcd7-3e03f3a175ab");
+                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/finalyear-628f8.appspot.com/o/Classical%203.mp3?alt=media&token=d22ea4df-ee9e-44d8-a8b3-c8a2c728fa19");
                         mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                             @Override
                             public void onPrepared(MediaPlayer mediaPlayer) {
@@ -228,7 +231,7 @@ public class MusicListActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     try {
 
-                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/wc4you-6b4db.appspot.com/o/Music%2FInstrument%203%20Flute.mp3?alt=media&token=30844804-2daa-4f05-b1b9-2660032b1281");
+                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/finalyear-628f8.appspot.com/o/Instrument%203%20Flute.mp3?alt=media&token=366b8269-70af-4e01-a499-a1873159782d");
                         mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                             @Override
                             public void onPrepared(MediaPlayer mediaPlayer) {
@@ -252,7 +255,8 @@ public class MusicListActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     try {
 
-                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/wc4you-6b4db.appspot.com/o/Music%2FInstrument%202%20Piano.mp3?alt=media&token=0a768512-94e7-4fb9-8df6-50eb74ea35fc");
+                        //                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/wc4you-6b4db.appspot.com/o/Music%2FInstrument%202%20Piano.mp3?alt=media&token=0a768512-94e7-4fb9-8df6-50eb74ea35fc")
+                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/finalyear-628f8.appspot.com/o/Instrument%202%20Piano.mp3?alt=media&token=2afc499f-ac40-476a-bdc1-bafa7430d5e7");
                         mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                             @Override
                             public void onPrepared(MediaPlayer mediaPlayer) {
@@ -276,7 +280,8 @@ public class MusicListActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     try {
 
-                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/wc4you-6b4db.appspot.com/o/Music%2FInstrument%201%20Mix.mp3?alt=media&token=fdd70423-51cf-49b9-ae5b-aa521f5a09b9");
+//                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/wc4you-6b4db.appspot.com/o/Music%2FInstrument%201%20Mix.mp3?alt=media&token=fdd70423-51cf-49b9-ae5b-aa521f5a09b9");
+                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/finalyear-628f8.appspot.com/o/Instrument%201%20Mix.mp3?alt=media&token=3055ce60-8fdd-42e4-a2ee-3ad814327c2e");
                         mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                             @Override
                             public void onPrepared(MediaPlayer mediaPlayer) {
@@ -310,7 +315,7 @@ public class MusicListActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     try {
 
-                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/wc4you-6b4db.appspot.com/o/Music%2FAmbient%201.mp3?alt=media&token=65272534-aa34-409b-8631-d1372ba8da4f");
+                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/finalyear-628f8.appspot.com/o/Ambient%201.mp3?alt=media&token=c5b8c87c-ba32-409a-8a3e-e6813e54001c");
                         mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                             @Override
                             public void onPrepared(MediaPlayer mediaPlayer) {
@@ -334,7 +339,7 @@ public class MusicListActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     try {
 
-                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/wc4you-6b4db.appspot.com/o/Music%2FAmbient%202.mp3?alt=media&token=88374e07-c7d8-49a4-965a-4f07c33df6c2");
+                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/finalyear-628f8.appspot.com/o/Ambient%202.mp3?alt=media&token=ec1fda69-aee4-40ba-9dc4-f53309ebcfdc");
                         mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                             @Override
                             public void onPrepared(MediaPlayer mediaPlayer) {
@@ -358,7 +363,7 @@ public class MusicListActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     try {
 
-                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/wc4you-6b4db.appspot.com/o/Music%2FAmbient%203.mp3?alt=media&token=81ecc152-8c80-4e69-b9a2-c3300debfd7c");
+                        mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/finalyear-628f8.appspot.com/o/Ambient%203.mp3?alt=media&token=6aaa29ce-911d-495f-86a5-8fe5cb22111b");
                         mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                             @Override
                             public void onPrepared(MediaPlayer mediaPlayer) {
